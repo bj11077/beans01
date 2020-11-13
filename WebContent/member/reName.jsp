@@ -9,6 +9,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+if(session.getAttribute("user") == null){%>
+	<script type="text/javascript">
+	location.href= "login.jsp"
+	</script>
+<% }%>
 <jsp:useBean id="dao"  class="members.MemberDAO"></jsp:useBean>
 <%ArrayList<MemberDTO> list = dao.memberSearch((String)session.getAttribute("id")); %>
 <form action="reNameChk.jsp">

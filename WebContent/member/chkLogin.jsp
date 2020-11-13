@@ -25,6 +25,7 @@ if(list.isEmpty()){%>
 <%
 if(list.get(0).getPwd().equals(request.getParameter("pwd"))){
 	session.setAttribute("user", list.get(0).getName());
+	
 %>	
 <script type="text/javascript">
 	location.href="successLogin.jsp"

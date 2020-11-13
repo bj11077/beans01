@@ -24,6 +24,16 @@ function logoutF(){
 
 </head>
 <body onload="logoutF()">
+
+
+<%
+if(session.getAttribute("user") == null){%>
+	<script type="text/javascript">
+	location.href= "login.jsp"
+	</script>
+<% }%>
+
+
 <%@ include file="../default/header.jsp" %>
 <h1>로그인 페이지</h1>
 

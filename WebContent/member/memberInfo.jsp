@@ -25,6 +25,14 @@ function logoutF(){
 </script>
 </head>
 <body onload="logoutF()">
+
+<%
+if(session.getAttribute("user") == null){%>
+	<script type="text/javascript">
+	location.href= "login.jsp"
+	</script>
+<% }%>
+
 <jsp:useBean id="dao"  class="members.MemberDAO"/>
 <%@ include file="../default/header.jsp" %>
 <h1>회원 목록</h1>
